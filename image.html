@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="transstyles.css">
+    <title>Traducteur</title>
+</head>
+<body>
+    <div class="welcome-message">
+        <h1>Bienvenue dans le traducteur !</h1>
+        <p>Vous avez bien choisi la traduction. Cliquez sur le bouton ci-dessous pour commencer à traduire.</p>
+        <button id="start-translation">Commencer</button>
+    </div>
+
+    <h2 class="title">Mi-dev traduction</h2>
+
+    <div class="translator-container" style="display: none;">
+        <div class="input-box">
+            <textarea class="from-text" placeholder="Entrez le texte ici..."></textarea>
+            <select class="language-select"></select>
+            <i class="exchange">🔄</i>
+            <select class="language-select"></select>
+            <textarea class="to-text" placeholder="Traduction" readonly></textarea>
+        </div>
+        <button class="translate-btn">Traduire</button>
+    </div>
+
+    <script src="transscript.js"></script>
+</body>
+</html>
