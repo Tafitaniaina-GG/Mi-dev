@@ -1,0 +1,219 @@
+/* Style général pour la page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('M12.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+    backdrop-filter: blur(4px); /* Ajout d'un effet de flou pour améliorer la lisibilité */
+}
+
+/* Style du message de bienvenue */
+.welcome-message {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message h1 {
+    font-size: 2.5em;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.welcome-message p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Style général des boutons avec animation de contours */
+button {
+    position: relative;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    outline: none;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 25px;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #3498db, #9b59b6, #e74c3c, #f39c12);
+    background-size: 400%;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 25px;
+    opacity: 0;
+}
+
+button:hover::before {
+    opacity: 1;
+    background-position: 200%;
+    animation: gradient 3s ease infinite;
+}
+
+/* Animation de changement de couleurs */
+@keyframes gradient {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/* Spécifique pour le bouton de démarrage */
+#start-translation {
+    margin-top: 20px;
+}
+
+#start-translation:hover {
+    background-color: #2980b9;
+}
+
+/* Style pour le titre */
+.title {
+    font-size: 2em;
+    color: #fff;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Style du conteneur du traducteur */
+.translator-container {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour la boîte de saisie */
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Ajouter une animation de fond aux zones de texte */
+
+textarea {
+    width: 45%;
+    height: 150px;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    background: linear-gradient(45deg, #3498db, #9b59b6, #e74c3c, #f39c12);
+    background-size: 400%;
+    animation: gradient-textarea 3s ease infinite; /* Animation pour le fond */
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.5);
+}
+
+/* Animation pour les couleurs du fond des textareas */
+@keyframes gradient-textarea {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+
+textarea:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.5);
+}
+
+/* Style des sélecteurs de langue */
+.language-select {
+    width: 20%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.language-select:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.5);
+}
+
+/* Style de l'icône d'échange */
+.exchange {
+    font-size: 2em;
+    cursor: pointer;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+.exchange:hover {
+    color: #2980b9;
+}
+
+/* Style du bouton traduire */
+.translate-btn {
+    padding: 12px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.translate-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Pour une meilleure responsivité */
+@media (max-width: 600px) {
+    .input-box {
+        flex-direction: column;
+    }
+
+    textarea, .language-select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .language-select {
+        width: 100%;
+    }
+}
