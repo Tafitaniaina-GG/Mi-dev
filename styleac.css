@@ -1,0 +1,85 @@
+/* Style général pour la page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('accord1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+}
+
+/* Style du titre principal */
+h1 {
+    color: #ffffff;
+    font-size: 3em;
+    margin: 0;
+    padding: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Style pour l'encart du titre du site */
+header {
+    font-size: 1.5em;
+    padding: 30px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Style de l'input de recherche */
+#question {
+    padding: 10px;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    font-size: 1.2em;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style du bouton de recherche */
+#ask-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+#ask-btn:hover {
+    background-color: #218838;
+}
+
+/* Style pour le div qui affiche la réponse */
+#response {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Style pour le footer */
+footer {
+    margin-top: 50px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+#test {
+    font-size: 1.2em;
+}

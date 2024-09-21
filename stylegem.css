@@ -1,0 +1,267 @@
+/* Général */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+#output-container {
+    flex-grow: 1;
+    background-image: url('tafita.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    border-radius: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    display: inline-block;
+    position: relative;
+    word-wrap: break-word;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-message {
+    background-color: #dcf8c6;
+    margin-left: auto;
+    color: #000;
+    text-align: right;
+    border-radius: 20px 20px 0 20px;
+}
+
+.ai-message {
+    background-color: #f1f0f0;
+    margin-right: auto;
+    color: #000;
+    text-align: left;
+    border-radius: 20px 20px 20px 0;
+}
+
+.user-message img,
+.ai-message img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.ai-message img {
+    margin-right: 10px;
+}
+
+/* Indicateur de saisie */
+.typing-indicator {
+    display: none;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.typing-indicator span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    animation: typing 1s infinite;
+    margin-right: 4px;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Section d'entrée */
+.input-group {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#prompt-input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+#generate-btn {
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#generate-btn:hover {
+    background-color: #0056b3;
+}
+
+#image-preview {
+    display: flex;
+    align-items: center;
+}
+
+#image-preview img {
+    height: 38px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+#output-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+#output-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#output-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+#output-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Ajustement du bouton d'envoi */
+.input-group .input-group-text {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+/* Cacher le texte de l'input file */
+#image-input {
+    display: none;
+}
+
+#inputGroupFileAddon {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Styliser le bouton Send comme sur Facebook */
+#generate-btn {
+    background-color: #0084ff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+#generate-btn:hover {
+    background-color: #006bbf;
+}
+
+#generate-btn svg {
+    margin-left: 5px;
+    fill: white;
+}
+
+/* Optionnel: Ajuster l'input de texte */
+#prompt-input {
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    width: 50%;
+}
+/* Style pour le conteneur */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+/* Style pour le texte "BY TAFITANIAINA" */
+.text-by {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style pour l'icône sablier à côté du texte */
+.hourglass-icon {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+/* Style pour le bouton "Paramètres" */
+.settings-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Style pour l'icône à l'intérieur du bouton "Paramètres" */
+.settings-icon::before {
+  content: "\2699"; /* Icône de paramètre ⚙️ */
+  font-size: 18px;
+  margin-right: 5px;
+}

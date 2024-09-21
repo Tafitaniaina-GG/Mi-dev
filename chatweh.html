@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Web Chat</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Changement de police */
+            text-align: center;
+            background-image: url('Mw.jpg'); /* Image de fond pour toute la page */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .welcome-message {
+            font-size: 24px;
+            margin-top: 50px;
+            padding: 20px;
+            border: 3px solid;
+            border-radius: 10px;
+            display: inline-block;
+            background-image: url('M3.jpg'); /* Image de fond pour le message de bienvenue */
+            background-size: cover;
+            animation: colorChange 2s infinite;
+            color: white;
+        }
+
+        @keyframes colorChange {
+            0% { border-color: red; }
+            25% { border-color: blue; }
+            50% { border-color: green; }
+            75% { border-color: purple; }
+            100% { border-color: orange; }
+        }
+
+        .menu {
+            margin-top: 30px;
+        }
+
+        .menu-item {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        .menu-item button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: 3px solid;
+            border-radius: 10px;
+            background-image: url('chatgpt1.jpg'); /* Fond du bouton ChatGPT */
+            background-size: cover;
+            cursor: pointer;
+            transition: border-color 1s;
+            animation: colorChange 3s infinite;
+            color: yellow;
+            width: 120px;
+            height: 120px;
+            display: block;
+        }
+
+        .menu-item img {
+            display: block;
+            margin: 10px auto;
+            width: 100px;
+            height: 100px;
+        }
+
+        button:hover {
+            animation: colorChangeHover 1s infinite;
+        }
+
+        @keyframes colorChangeHover {
+            0% { border-color: orange; }
+            25% { border-color: purple; }
+            50% { border-color: yellow; }
+            75% { border-color: pink; }
+            100% { border-color: teal; }
+        }
+
+        #gemini-button {
+            background-image: url('gemini1.jpg'); /* Fond du bouton Gemini */
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="welcome-message">
+        Vous avez bien choisi le menu web chat, et veuillez choisir l'intelligence artificielle que vous souhaitez utiliser pour répondre à vos questions.
+    </div>
+
+    <div class="menu">
+        <div class="menu-item">
+            <a href="chatgpt.html">
+                <button>ChatGPT4</button>
+            </a>
+        </div>
+
+        <div class="menu-item">
+            <a href="gemini.html">
+                <button id="gemini-button">Gemini</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
