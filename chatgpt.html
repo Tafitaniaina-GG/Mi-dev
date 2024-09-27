@@ -1,46 +1,45 @@
-
-<!-- Do not change crédit -->
 <!DOCTYPE html>
-<!-- Coding By Metoushela Walker Full stack developer- https://metoushela-portfolio.vercel.app-->
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- title -->
-    <title>Mi-dev prod</title>
-    <!-- Font --> <footer>
-      <p>Mi-dev prod</p>
-      <p> <a href="about.html"></a>Powered by MI-DEV madagascar</p>
-    </footer>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <!-- Css -->
-    <link rel="stylesheet" href="styleschat.css">
-    
+    <title>Chatbot avec Image et Vocal</title>
+    <link rel="stylesheet" href="stylegpt.css">
 </head>
-<!-- body -->
 <body>
-    
-    <!--Chat container -->
-    <div class="chat-container">
-        <div class="header">
-            <button id="toggle-mode" class="icon-btn">
-                <span class="material-symbols-outlined"></span>
-            </button>
-            <button id="clear-chat" class="icon-btn">
-                <span class="material-symbols-outlined"></span>
-            </button>
+    <!-- Section Logo et Menu -->
+    <div id="logo-container">
+        <span id="rtm-text">RTM chat 🇲🇬</span>
+        <img src="logo.jpg" alt="Logo" id="logo">
+        <button id="menuButton" onclick="location.href='menu.html'">Menu</button>
+    </div>
+
+    <!-- Section Chat -->
+    <div id="chat-container" class="dark-mode">
+        <div id="chatbox"></div>
+        <div style="display: flex; align-items: center;">
+            <button id="darkModeToggle" onclick="toggleDarkMode()">🇲🇬</button>
+            <input type="text" id="inputBox" placeholder="Tapez votre message...">
+            <button id="voiceButton">🎤</button>
+            <button id="sendButton">&#10148;</button>
         </div>
-        <ul id="chat-list" class="chat-list"></ul>
-        <div class="typing-indicator" id="typing-indicator">
-            <span></span><span></span><span></span>
+    </div>
+
+    <!-- Section Upload d'image -->
+    <div id="image-section">
+        <input type="file" id="image-input" accept="image/*">
+        <br>
+        <!-- Flexbox pour placer l'image et le bouton côte à côte -->
+        <div id="image-preview-container">
+            <img id="image-preview" src="" alt="Aperçu de l'image" style="display:none;">
+            <button id="extract-text-btn">Extraire le texte</button>
         </div>
-        <form id="chat-form">
-            <input type="text" id="user-input" placeholder="alefao ny afatra anao..." autocomplete="off" required>
-            <button type="submit" class="send-btn">Send</button>
-        </form>
-        </div>
-        
-    <!-- Script -->
-    <script src="scriptchat.js"></script>
+        <p id="loading" style="display: none;">Analyse de l'image en cours...</p>
+        <div id="text-output" contenteditable="true"></div>
+    </div>
+
+    <!-- Inclusion de la librairie Tesseract.js -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.1/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
